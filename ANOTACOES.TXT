@@ -1,0 +1,21 @@
+npm create vite@latest PurpuraSec -- --template react
+
+Para o efeito de "ir aparecendo", a forma mais moderna e fácil é usar uma biblioteca chamada Framer Motion. Ela lida com animações de entrada e saída de forma muito simples.
+npm install framer-motion
+
+npm install framer-motion
+
+npm run dev
+
+C:\Users\Maicon Daniel\Desktop\Projetos\PurpuraSec>npm install framer-motion
+
+added 4 packages, and audited 162 packages in 2s
+
+33 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+npm install -D tailwindcss postcss autoprefixer
+
+npx tailwindcss init -p

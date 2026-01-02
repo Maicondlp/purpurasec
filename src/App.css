@@ -1,0 +1,110 @@
+body {
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  /* Múltiplos fundos: a imagem vem PRIMEIRO para ficar sobre o gradiente */
+  background: 
+    radial-gradient(circle, rgba(62, 30, 104, 1) 0%, rgba(27, 8, 56, 1) 100%) fixed;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.navbar {
+  width: 100%;           /* Ocupa toda a largura */
+  padding: 20px 0;       /* Espaço em cima e embaixo dos botões */
+  display: flex;
+  justify-content: center; /* Centraliza os botões dentro da barra */
+  gap: 15px;
+  position: absolute;    /* Garante que ela ignore paddings do pai */
+  top: 0;
+  left: 0;
+  color: #FFACAC;
+}
+
+.navbar button {
+  background: none;       /* Remove a cor de fundo do botão */
+  border: none;           /* Remove as bordas */
+  padding: 0;
+  cursor: pointer;
+  
+  /* Estilo do Texto */
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  color: #bc6ff1;         /* Um roxo mais claro/neon para destacar do fundo */
+  font-size: 1.2rem;      /* Texto um pouco maior */
+  font-weight: 600;       /* Deixa a fonte levemente mais grossa */
+  letter-spacing: 1.5px;  /* Espaçamento entre letras profissional */
+  
+  transition: all 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+.navbar button:hover {
+  color: #ffffff;         /* Muda para branco ao passar o mouse */
+  transform: translateY(-2px); /* Leve subida para dar feedback visual */
+  text-shadow: 0px 0px 10px rgba(188, 111, 241, 0.8); /* Brilho suave */
+}
+
+p{
+  text-align: justify;      /* Justifica o texto */
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  color: #FFFFFF;         /* Um roxo mais claro/neon para destacar do fundo */
+  font-size: 1.2rem;      /* Texto um pouco maior */
+  font-weight: 600; 
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+/* No seu index.css */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}

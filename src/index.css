@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #0d0214; /* Cor de fundo do PurpuraSec */
+}
+
+#root {
+  width: 100%; /* Garante que o React ocupe a largura toda */
+  margin: 0;
+}

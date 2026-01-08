@@ -2,6 +2,54 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ShieldAlert, Search, FileCheck, Presentation, Menu, X, GoalIcon, ContactRoundIcon, DnaIcon, ActivityIcon, BookOpenCheckIcon, BiohazardIcon } from 'lucide-react';
 
+function EbookCard({ icon, title, description, link, status }) {
+  return (
+    <motion.div
+      whileHover={{ scale: 1.03 }}
+      className="relative bg-slate-900/70 border border-white/10 
+                 rounded-2xl p-8 backdrop-blur-xl
+                 hover:shadow-[0_0_40px_rgba(168,85,247,0.25)]
+                 transition-all"
+    >
+      {status && (
+        <span className="absolute top-4 right-4 text-xs px-3 py-1 rounded-full 
+                         bg-purple-500/20 text-purple-300 uppercase tracking-widest">
+          {status}
+        </span>
+      )}
+
+      <div className="mb-6 w-14 h-14 flex items-center justify-center 
+                      rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400">
+        {icon}
+      </div>
+
+      <h3 className="text-xl font-bold text-white mb-3">
+        {title}
+      </h3>
+
+      <p className="text-slate-400 text-sm leading-relaxed mb-6 text-justify hyphens-auto">
+        {description}
+      </p>
+
+      {link ? (
+        <a
+          href={link}
+          target="_blank"
+          className="text-purple-400 hover:text-purple-300 
+                     font-medium transition"
+        >
+          Baixar e-book →
+        </a>
+      ) : (
+        <span className="text-slate-500 text-sm italic">
+          Disponível em breve
+        </span>
+      )}
+    </motion.div>
+  )
+}
+
+
 // --- COMPONENTE DO CARD RESPONSIVO ---
 function ServiceCard({ icon, title, description }) {
   return (
@@ -53,7 +101,7 @@ function App() {
       {/* Navbar Responsiva */}
       <nav className="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-white/5">
         <div className="max-w-6xl mx-auto px-6 py-4 flex flex-wrap justify-center gap-4 md:gap-8">
-          {['home', 'quem-somos', 'servicos', 'contato'].map((item) => (
+          {['home', 'quem-somos', 'servicos', 'ebooks', 'contato'].map((item) => (
             <button 
               key={item}
               onClick={() => setSecaoAtiva(item)}
@@ -221,6 +269,52 @@ function App() {
                   title="Palestras e Treinamentos" 
                   description="Capacitação focada em combater a Engenharia Social e elevar a cultura de cibersegurança da equipe com treinamentos práticos."
                 />
+              </div>
+            </motion.div>
+          )}
+          {secaoAtiva === 'ebooks' && (
+            <motion.div
+              key="ebooks"
+              {...animacaoEntrada}
+              className="flex flex-col items-center space-y-12"
+            >
+              <h2 className="text-4xl font-bold text-center text-white">
+                E-books & Conteúdos
+              </h2>
+
+              <p className="text-slate-400 max-w-2xl text-center">
+                Conteúdos técnicos desenvolvidos pela PurpuraSec para disseminar
+                conhecimento, fortalecer a cultura de segurança e apoiar decisões estratégicas.
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 
+                              gap-8 w-full max-w-5xl mx-auto px-4">
+                
+                <EbookCard
+                  icon={<BookOpenCheckIcon size={28} />}
+                  title="Sua senha já vazou?"
+                  description="Descubra como verificar vazamentos, ativar 2FA e proteger tudo com cofres criptografados."
+                  link="#"
+                  status="Gratuito"
+                />
+
+                {/*<EbookCard
+                  icon={<Search size={28} />}
+                  title="Análise de Vulnerabilidades na Prática"
+                  description="Como identificar, classificar e priorizar vulnerabilidades com foco
+                              em risco real para o negócio."
+                  link="#"
+                  status="Gratuito"
+                />*/}
+
+                <EbookCard
+                  icon={<ShieldAlert size={28} />}
+                  title="Segurança da Informação para Empresas"
+                  description="Guia estratégico para gestores entenderem riscos cibernéticos,
+                              LGPD e tomada de decisão."
+                  status="Em breve"
+                />
+
               </div>
             </motion.div>
           )}

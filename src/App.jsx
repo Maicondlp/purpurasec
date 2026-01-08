@@ -75,20 +75,20 @@ function App() {
             <motion.div key="home" {...animacaoEntrada} className="text-center space-y-6">
               {/* Contêiner da Imagem Responsiva */}
               <div className="flex justify-center mb-8">
-                <div className="relative w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 animate-float ">
+                <div className="relative w-56 h-56 md:w-72 md:h-72 lg:w-96 lg:h-96 animate-float">
                   <img 
-                    src="purpurasec_polvo.png" 
+                    src="logo_purpurasec-01.png" 
                     alt="Mascote PurpuraSec"
                     className="w-full h-full object-contain drop-shadow-[0_0_30px_rgba(168,85,247,0.4)] animate-pulse-slow "
                   />
                 </div>
               </div>
-              <h1 className="text-5xl md:text-7xl font-black text-white">
+              {/*<h1 className="text-5xl md:text-7xl font-black text-white">
                 Purpura<span className="text-purple-600">Sec</span>
               </h1>
               <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-                Sua segurança digital elevada ao próximo nível com inteligência e estratégia.
-              </p>
+                Estratégia, análise e proteção para o seu ambiente digital.
+              </p>*/}
             </motion.div>
           )}
 

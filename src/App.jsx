@@ -298,14 +298,13 @@ function App() {
                   status="Gratuito"
                 />
 
-                {/*<EbookCard
+                <EbookCard
                   icon={<Search size={28} />}
-                  title="Análise de Vulnerabilidades na Prática"
-                  description="Como identificar, classificar e priorizar vulnerabilidades com foco
-                              em risco real para o negócio."
+                  title="Ubuntu Seguro para Usuários"
+                  description="Como proteger seu computador Linux no dia a dia"
                   link="#"
                   status="Gratuito"
-                />*/}
+                />
 
                 <EbookCard
                   icon={<ShieldAlert size={28} />}

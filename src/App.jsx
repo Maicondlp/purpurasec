@@ -330,10 +330,10 @@ function App() {
                 </p>
                 
                 <a 
-                  href="mailto:contato@purpurasec.com.br" 
+                  href="https://ig.me/m/purpurasec/" 
                   className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-10 rounded-full transition-all hover:scale-105 active:scale-95 shadow-lg shadow-purple-500/20"
                 >
-                  Enviar E-mail Agora
+                  Entre em contato conosco
                 </a>
                 
                 <div className="mt-10 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-center gap-6 text-sm text-slate-500 font-mono">

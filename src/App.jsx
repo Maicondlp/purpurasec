@@ -292,9 +292,9 @@ function App() {
                 
                 <EbookCard
                   icon={<BookOpenCheckIcon size={28} />}
-                  title="Sua senha já vazou?"
-                  description="Descubra como verificar vazamentos, ativar 2FA e proteger tudo com cofres criptografados."
-                  link="#"
+                  title="Sua senha foi vazada?"
+                  description="Como acontece, como descobrir e como se proteger"
+                  link="ebook-suas-senhas.pdf"
                   status="Gratuito"
                 />
 
@@ -303,7 +303,7 @@ function App() {
                   title="Ubuntu Seguro para Usuários"
                   description="Como proteger seu computador Linux no dia a dia"
                   link="#"
-                  status="Gratuito"
+                  status="Em breve"
                 />
 
                 <EbookCard

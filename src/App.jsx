@@ -302,7 +302,6 @@ function App() {
                   icon={<Search size={28} />}
                   title="Ubuntu Seguro para Usuários"
                   description="Como proteger seu computador Linux no dia a dia"
-                  link="#"
                   status="Em breve"
                 />
 

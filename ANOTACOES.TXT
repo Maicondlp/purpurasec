@@ -19,3 +19,11 @@ found 0 vulnerabilities
 npm install -D tailwindcss postcss autoprefixer
 
 npx tailwindcss init -p
+
+git add .
+git commit -m "config deploy github pages"
+git push origin main
+
+git branch
+
+npm run deploy
